@@ -25,10 +25,10 @@ Flashing the images:
 dd image release:
 	Linux host:
 		Use ums or mfgtools to mount as storage first
-		Please refer to the Android-Pie_User-Manual_201900807.pdf chapter 6.2
+		Please refer to the PreBuilt_OS_Image_Installation_Guide_v3.5.pdf chapter 6.2
 		sudo dd if=xxx.img of=/dev/sdx bs=1M oflag=dsync
 
 	Windows host:
 		Use ums or mfgtools to mount as storage first
-		Please refer to the Android-Pie_User-Manual_201900807.pdf chapter 6.1
+		Please refer to the PreBuilt_OS_Image_Installation_Guide_v3.5.pdf chapter 6.1
 		Execute Win32DiskImager.exe
