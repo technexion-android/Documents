@@ -1,7 +1,7 @@
 *****************************************************
 * Author: Technexion                                *
 *                                                   *
-* Date: 2019/09/20                                  *
+* Date: 2019/10/22                                  *
 *                                                   *
 * Title: Android 9 Runtime image README file        *
 *                                                   *
@@ -50,3 +50,5 @@ dd image release: (cpu_name: imx8mm)
         Linux host: method 1: sudo dd if=xxx.img of=/dev/sdx bs=1M (use ums or mfgtools to mount as storage first)
                     method 2: uuu -b emmc_all imx-boot-pico-imx8mm-sd.bin xxx.img
         Windows host: uuu -b emmc_all imx-boot-pico-imx8mm-sd.bin xxx.img
+
+NOTE: This demo image is base on 1GiB DRAM configuation, the performance may no good if you using up to 2GiB DRAM module, please compile our github source code to generate the suitable images if you need.
