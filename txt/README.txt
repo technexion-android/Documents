@@ -1,7 +1,7 @@
 *****************************************************
 * Author: Technexion                                *
 *                                                   *
-* Date: 2019/09/19                                  *
+* Date: 2020/06/29                                  *
 *                                                   *
 * Title: Android 9 Runtime image README file        *
 *                                                   *
@@ -32,3 +32,7 @@ dd image release:
 		Use ums or mfgtools to mount as storage first
 		Please refer to the PreBuilt_OS_Image_Installation_Guide_v3.5.pdf chapter 6.1
 		Execute Win32DiskImager.exe
+
+2020/06/29 update:
+	1. Add IMX7 silicon rev.1.3 support
+	2. Update u-boot splash screen
