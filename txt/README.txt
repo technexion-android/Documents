@@ -1,7 +1,7 @@
 *****************************************************
 * Author: Technexion                                *
 *                                                   *
-* Date: 2019/10/22                                  *
+* Date: 2020/06/29                                  *
 *                                                   *
 * Title: Android 9 Runtime image README file        *
 *                                                   *
@@ -52,3 +52,6 @@ dd image release: (cpu_name: imx8mm)
         Windows host: uuu -b emmc_all imx-boot-pico-imx8mm-sd.bin xxx.img
 
 NOTE: This demo image is base on 1GiB DRAM configuation, the performance may no good if you using up to 2GiB DRAM module, please compile our github source code to generate the suitable images if you need.
+
+2020/06/29 update items:
+  1. upgrade ddr timing configuration on PICO-IMX8M and EDM-IMX8M platforms
