@@ -1,22 +1,22 @@
 *****************************************************
 * Author: Technexion                                *
 *                                                   *
-* Date: 2020/06/29                                  *
+* Date: 2020/11/09                                  *
 *                                                   *
-* Title: Android 9 Runtime image README file        *
+* Title: Android 10 Runtime image README file       *
 *                                                   *
 *****************************************************
 
 # User Manual:
-Android-Pie_Release-Note_20190920.pdf
+Android-Pie_Release-Note_20190920.pdf (Android 10 will be updated soon)
 
 # Release Note:
-Android-Pie_User-Manual_201900920.pdf
+Android-Pie_User-Manual_201900920.pdf (Android 10 will be updated soon)
 
 # Github SDK:
-https://github.com/technexion-android/cookers/tree/tn-p9.0.0_2.0.1_8m-ga
+https://github.com/technexion-android/cookers/tree/tn-android-10.0.0-2.5.0_8m-next
 
-# UUU tool (recommend 1.2.91 revision)
+# UUU tool (recommend 1.4.43 revision)
 https://github.com/NXPmicro/mfgtools/releases
 
 # UUU User Manual
@@ -38,20 +38,5 @@ uuu release:
 	Linux host: sudo ./uuu_imx_android_flash.sh -c <eMMC size> -f <cpu name> -e -D .
 	Windows host: uuu_imx_android_flash.bat -c <eMMC size> -f <cpu name> -e -D .
 
-	eMMC size: 8GB -> 7, 16GB -> 13, 32GB -> 28
-	cpu_name: pico-imx8m -> imx8mq, edm-imx8m -> imx8mq, pico-imx8mm -> imx8mm, flex-imx8mm -> imx8mm
-
-dd image release: (cpu_name: imx8mq)
-	Linux host: method 1: sudo dd if=xxx.img of=/dev/sdx bs=1M (use ums or mfgtools to mount as storage first)
-		    method 2: uuu -b emmc_all imx-boot-pico-imx8mq-sd.bin xxx.img
-	Windows host: uuu -b emmc_all imx-boot-pico-imx8mq-sd.bin xxx.img
-
-dd image release: (cpu_name: imx8mm)
-        Linux host: method 1: sudo dd if=xxx.img of=/dev/sdx bs=1M (use ums or mfgtools to mount as storage first)
-                    method 2: uuu -b emmc_all imx-boot-pico-imx8mm-sd.bin xxx.img
-        Windows host: uuu -b emmc_all imx-boot-pico-imx8mm-sd.bin xxx.img
-
-NOTE: This demo image is base on 1GiB DRAM configuation, the performance may no good if you using up to 2GiB DRAM module, please compile our github source code to generate the suitable images if you need.
-
-2020/06/29 update items:
-  1. upgrade ddr timing configuration on PICO-IMX8M and EDM-IMX8M platforms
+	eMMC size: 16GB -> 13, 32GB -> 28
+	cpu_name: edm-g-imx8mp -> imx8mp
