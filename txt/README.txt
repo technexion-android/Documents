@@ -35,8 +35,8 @@ uuu release:
 
   Please change the boot mode to seiral download mode first, then connect a OTG cable from board to host PC, then issue command:
 
-	Linux host: sudo ./uuu_imx_android_flash.sh -c <eMMC size> -f <cpu name> -e -D .
-	Windows host: uuu_imx_android_flash.bat -c <eMMC size> -f <cpu name> -e -D .
+	Linux host: sudo ./uuu_imx_android_flash.sh -c <eMMC size> -f <cpu name> -e -D . -super
+	Windows host: uuu_imx_android_flash.bat -c <eMMC size> -f <cpu name> -e -D . -super
 
 	eMMC size: 16GB -> 13, 32GB -> 28
 	cpu_name: edm-g-imx8mp -> imx8mp
