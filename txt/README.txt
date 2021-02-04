@@ -38,5 +38,5 @@ uuu release:
 	Linux host: sudo ./uuu_imx_android_flash.sh -c <eMMC size> -f <cpu name> -e -D . -super
 	Windows host: uuu_imx_android_flash.bat -c <eMMC size> -f <cpu name> -e -D . -super
 
-	eMMC size: 16GB -> 13, 32GB -> 28
+	eMMC size: 9GB -> 9 (for qucik testing), 16GB -> 13, 32GB -> 28
 	cpu_name: edm-g-imx8mp -> imx8mp
