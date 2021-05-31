@@ -1,33 +1,44 @@
 *****************************************************
 * Author: Technexion                                *
 *                                                   *
-* Date: 2021/03/30                                  *
+* Date: 2021/05/31                                  *
 *                                                   *
-* Title: Android 11 Runtime image README file       *
+* Title: Android 11 UUU installer README file       *
 *                                                   *
 *****************************************************
 
-# User Manual:
-Android-Pie_Release-Note_20190920.pdf (Android 11 will be updated soon)
-
 # Release Note:
-Android-Pie_User-Manual_201900920.pdf (Android 11 will be updated soon)
+https://developer.technexion.com/docs/android-11-release-notes
 
-# Github SDK:
-https://github.com/technexion-android/cookers/tree/tn-android-11.0.0-1.2.0_8m-next
+# Github BSP source code:
+https://github.com/technexion-android/cookers/tree/tn-android-11.0.0_1.2.0_8m-next
 
-# UUU tool (recommend 1.4.72 revision)
-https://github.com/NXPmicro/mfgtools/releases
+# Download UUU tool (revision 1.4.72 or above is necessary, adapt 1.4.72 as example)
+
+Ubuntu host:
+	https://github.com/NXPmicro/mfgtools/releases/download/uuu_1.4.72/uuu
+Windows 10 host:
+	https://github.com/NXPmicro/mfgtools/releases/download/uuu_1.4.72/uuu.exe
 
 # UUU User Manual
-UUU.pdf
+https://github.com/NXPmicro/mfgtools/releases/download/uuu_1.4.72/UUU.pdf
 
 # UUU environment settings
-Please refer to the Android-Pie_User-Manual chapter 5
 
-# Use zadig to install winusb driver
-Please refer to the UUU.pdf chapter 7.3
-zadig-2.4.exe
+Ubuntu Host:
+	$ sudo a+x uuu
+	$ sudo mv uuu /usr/bin/
+	$ uuu -v 
+	uuu (Universal Update Utility) for nxp imx chips -- libuuu_1.4.72-0-g8e9e189
+
+Windoes 10 Host:
+	1. Download VS2017 Redistribute Package for USB relate drivers: https://go.microsoft.com/fwlink/?LinkId=746572
+	2. Install VS2017 Redistribute Package
+	3. open 'cmd' tool with administrator permission
+		C:\Windows\system32> cd c:\
+		> mkdir utility
+		> copy uuu.exe utility
+		> set PATH=%PATH%;c:\utility 
 
 Flashing the images:
 
@@ -36,15 +47,14 @@ uuu release:
   Please change the boot mode to seiral download mode first, then connect a OTG cable from board to host PC, then issue command:
 
 
-flash 16GB size image to eMMC:
+flash image to eMMC:
 
-	Linux host: sudo ./uuu_imx_android_flash.sh -f <cpu name> -e -D .
-	Windows host: uuu_imx_android_flash.bat -f <cpu name> -e -D .
+Ubuntu  host:
+	$ sudo ./uuu_imx_android_flash.sh -f <cpu name> -e -D .
 
-flash 32GB size image to eMMC:
+Windows 10 host (remember close VMware/VirtualBox first is necessary to avoid USB stuck in virtual machine):
+	> uuu_imx_android_flash.bat -f <cpu name> -e (sometimes need press enter if stuck "This script is validated ....")
 
-	Linux host: sudo ./uuu_imx_android_flash.sh -c 28 -f <cpu name> -e -D .
-	Windows host: uuu_imx_android_flash.bat -c 28 -f <cpu name> -e -D .
+cpu_name: edm-g-imx8mp -> imx8mp, pico-imx8mm -> imx8mm
 
-
-cpu_name: edm-g-imx8mp -> imx8mp
+if you want to change image size: 14GiB -> -c 14, 32GiB -> -c 28
